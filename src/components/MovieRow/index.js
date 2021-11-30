@@ -3,7 +3,7 @@ import "./MovieRow.css";
 
 export default function index({ title, items }) {
   return (
-    <div classname="movieRow">
+    <div className="movieRow">
       <h2>{title}</h2>
       <div className="movieRow--listarea">
         <div className="movieRow--list">

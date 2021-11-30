@@ -1,8 +1,9 @@
 .movieRow{
-    margin-bottom: 30px;
+    margin-bottom: 15px;;
 }
 
-h2{
+.movieRow h2{
+    margin: 0;
     margin-left: 30px;
 }
 

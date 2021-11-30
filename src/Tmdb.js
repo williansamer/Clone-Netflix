@@ -53,4 +53,22 @@ export default {
       }
     ];
   },
+  getMovieInfo: async (id, type)=>{
+    let info = {};
+
+    if(id){
+        switch (type) {
+            case 'movie':
+                info = await basicFetch(`/movie/${id}?language=pt-BR&api_key=${API_KEY}`);
+                break;
+            case 'tv':
+                info = await basicFetch(`/tv/${id}?language=pt-BR&api_key=${API_KEY}`);
+                break;
+            default:
+                info = null;
+                break;
+        }
+    }
+    return info;
+  }
 };

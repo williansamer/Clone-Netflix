@@ -2,10 +2,12 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import Tmdb from "./Tmdb";
 
+import Header from './components/Header'
 import FeaturedMovie from './components/FeaturedMovie'
 import MovieRow from './components/MovieRow'
 
 function App() {
+  const [blackHeader, setBlackHeader] = useState(false);
   const [featuredData, setFeaturedData] = useState(null);
   const [movieList, setMovieList] = useState([]);
 
@@ -29,8 +31,25 @@ function App() {
     loadList();
   }, []);
 
+  useEffect(()=>{
+    const isBlackheader = ()=>{
+      if(window.scrollY > 10){
+        setBlackHeader(true);
+      } else{
+        setBlackHeader(false);
+      }
+    }
+
+    window.addEventListener("scroll", isBlackheader); //quando a página é rolada, chama a função isBlackheader
+
+    return ()=>{window.removeEventListener("scroll", isBlackheader);} //quando o componente for desmontado ou removido do DOM 
+
+  }, [])
+
   return (
     <div className="App">
+
+      <Header black={blackHeader}/>
 
       {featuredData && 
       <FeaturedMovie item={featuredData}/>}

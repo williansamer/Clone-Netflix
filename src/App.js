@@ -59,6 +59,12 @@ function App() {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+
+      <footer>
+        Feito com <span role="img" aria-label="coração">❤️</span> por Willian Samer.<br />
+        Direitos de imagem para Netflix. <br />
+        Dados pegos do site themoviedb.org
+      </footer>
     </div>
   );
 }

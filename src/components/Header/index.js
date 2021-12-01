@@ -1,7 +1,8 @@
 import React from 'react'
 import './Header.css';
 
-export default function index({black}) {
+export default function Header({black}) {
+    
     return (
         <header className={black ? 'black' : ''}>
             <div className="header--logo">

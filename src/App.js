@@ -4,7 +4,7 @@ import Tmdb from "./Tmdb";
 
 import Header from './components/Header'
 import FeaturedMovie from './components/FeaturedMovie'
-import MovieRow from './components/MovieRow'
+import MovieRow from './components/MovieRow/'
 
 function App() {
   const [blackHeader, setBlackHeader] = useState(false);

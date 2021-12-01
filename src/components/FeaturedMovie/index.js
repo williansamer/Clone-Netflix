@@ -2,7 +2,7 @@ import React from "react";
 import "./FeaturedMovie.css";
 import Image from "../images/a.jpg";
 
-export default function index({ item }) {
+export default function FeaturedMovie({ item }) {
   const firstDate = new Date(item.first_air_date);
   const genres = [];
   for (let i in item.genres) {

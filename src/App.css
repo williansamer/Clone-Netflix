@@ -19,3 +19,17 @@ footer{
     margin-bottom: 15px;  
     text-align: center;
 }
+
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

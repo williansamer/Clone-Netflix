@@ -9,6 +9,11 @@ export default function FeaturedMovie({ item }) {
     genres.push(item.genres[i].name);
   }
 
+  let description = item.overview;
+  if(description.length > 217) {
+    description = description.substring(0, 217) + "...";
+  }
+
   return (
     <section
       className="featured"
@@ -36,8 +41,8 @@ export default function FeaturedMovie({ item }) {
             </div>
           </div>
           <div className="featured--descriptions">
-            {item.overview !== ""
-              ? item.overview
+            {description !== ""
+              ? description
               : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."}
           </div>
           <div className="featured--buttons">
